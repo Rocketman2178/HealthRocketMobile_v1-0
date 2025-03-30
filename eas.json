@@ -1,6 +1,7 @@
 {
   "cli": {
-    "version": ">= 7.3.0"
+    "version": ">= 7.3.0",
+    "appVersionSource": "remote"
   },
   "build": {
     "development": {
@@ -23,9 +24,9 @@
   "submit": {
     "production": {
       "ios": {
-        "appleId": "your.apple.id@example.com",
-        "ascAppId": "your-app-store-connect-app-id",
-        "appleTeamId": "your-apple-team-id"
+        "appleId": "clay@healthrocket.app",
+        "ascAppId": "6743980669",
+        "appleTeamId": "QD8625U867"
       }
     }
   }

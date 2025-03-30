@@ -1,43 +1,40 @@
 {
   "expo": {
-    "name": "Health Rocket",
-    "slug": "health-rocket",
+    "name": "healthrocket",
+    "slug": "healthrocket",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "privacy": "hidden",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.healthrocket.app",
-      "buildNumber": "1",
+      "bundleIdentifier": "com.rocketman2178.healthrocket",
       "infoPlist": {
-        "NSCameraUsageDescription": "This app needs access to the camera to take profile photos.",
-        "NSPhotoLibraryUsageDescription": "This app needs access to photos for uploading profile images.",
-        "NSPhotoLibraryAddUsageDescription": "This app needs access to photos to save images.",
-        "NSLocationWhenInUseUsageDescription": "This app needs access to location to show nearby services.",
-        "UIBackgroundModes": ["fetch", "remote-notification"],
-        "CFBundleDevelopmentRegion": "en",
-        "CFBundleDisplayName": "Health Rocket",
-        "UIRequiresFullScreen": true,
-        "UIStatusBarHidden": false
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "bundler": "metro",
-      "output": "single",
+      "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
       "expo-router",
       [
-        "expo-build-properties",
+        "expo-splash-screen",
         {
-          "ios": {
-            "deploymentTarget": "15.0"
-          }
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
         }
       ]
     ],
@@ -45,10 +42,13 @@
       "typedRoutes": true
     },
     "extra": {
+      "router": {
+        "origin": false
+      },
       "eas": {
-        "projectId": "your-project-id"
+        "projectId": "61b0ea48-37e5-485d-90c2-a0de584ff346"
       }
     },
-    "owner": "your-expo-username"
+    "owner": "rocketman2178"
   }
 }

@@ -3,10 +3,11 @@ import { StyleSheet, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import * as WebBrowser from 'expo-web-browser';
+import { useUser } from '@/hooks/UserContext';
 
 export default function WebViewScreen() {
   const [isLoading, setIsLoading] = useState(true);
-
+  const {setUser} = useUser();
   const handleNavigationStateChange = useCallback(async (event: any) => {
     const { url } = event;
     
@@ -25,6 +26,9 @@ export default function WebViewScreen() {
         style={styles.webview}
         onNavigationStateChange={handleNavigationStateChange}
         onLoadStart={() => setIsLoading(true)}
+        onMessage={(event)=>{
+          setUser(JSON.parse(event.nativeEvent.data));
+        }}
         onLoadEnd={() => setIsLoading(false)}
         javaScriptEnabled={true}
         domStorageEnabled={true}

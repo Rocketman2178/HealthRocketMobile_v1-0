@@ -21,7 +21,7 @@ export default function SettingsScreen() {
 
   const handleNavigationStateChange = async (event: any) => {
     const { url } = event;
-    
+
     if (!url.includes('healthrocket.life')) {
       await WebBrowser.openBrowserAsync(url);
       return false;
@@ -89,5 +89,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#ff3b30',
     textAlign: 'center',
-  }
+  },
 });
